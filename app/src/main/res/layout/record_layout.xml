@@ -14,9 +14,11 @@
         android:id="@+id/ll_sample_rate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
         android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="10dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -125,8 +127,10 @@
         android:id="@+id/ll_radioGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:translationY="40dp"
         app:layout_constraintTop_toBottomOf="@id/ll_tempo_change"
-        android:orientation="horizontal">
+        tools:layout_editor_absoluteX="10dp">
 
         <com.geniusgithub.voicechange.ui.MultiRadioGroup
             android:id="@+id/radioGroup"
@@ -134,6 +138,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintTop_toBottomOf="@id/ll_tempo_change">
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -143,9 +148,9 @@
                     android:id="@+id/radioButtonCustom"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="自定义"/>
+                    android:buttonTint="#84FFFF"
+                    android:text="自定义" />
             </LinearLayout>
-
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -156,21 +161,24 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="TOM猫"/>
+                    android:buttonTint="#84FFFF"
+                    android:text="TOM猫" />
 
                 <RadioButton
                     android:id="@+id/radioButton2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="尖锐，扭曲"/>
+                    android:buttonTint="#84FFFF"
+                    android:text="尖锐，扭曲" />
 
                 <RadioButton
                     android:id="@+id/radioButton3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="男中"/>
+                    android:buttonTint="#84FFFF"
+                    android:text="男中" />
             </LinearLayout>
 
 
@@ -183,20 +191,23 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="厚重，颤抖"/>
+                    android:buttonTint="#84FFFF"
+                    android:text="厚重，颤抖" />
 
                 <RadioButton
                     android:id="@+id/radioButton5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="厚重"/>
+                    android:buttonTint="#84FFFF"
+                    android:text="厚重" />
 
                 <RadioButton
                     android:id="@+id/radioButton6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:buttonTint="#84FFFF"
                     android:text="未知" />
             </LinearLayout>
 
@@ -207,21 +218,28 @@
         android:id="@+id/ll_record"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@id/ll_radioGroup"
-        android:orientation="horizontal">
+        tools:layout_editor_absoluteX="10dp">
 
         <Button
             android:id="@+id/btnRecord"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="按下录音" />
+            android:background="#00B8D4"
+            android:text="按下录音"
+            android:textAlignment="center"
+            android:textAllCaps="false" />
 
         <CheckBox
             android:id="@+id/checkBoxPlaying"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:text="边录边播" />
+            android:buttonTint="#84FFFF"
+            android:text="边录边播"
+            android:translationX="40dp" />
 
     </LinearLayout>
 
@@ -233,12 +251,6 @@
         app:layout_constraintTop_toBottomOf="@id/ll_record"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tv_recordState"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="20sp"/>
     </LinearLayout>
 
 
@@ -246,13 +258,16 @@
         android:id="@+id/ll_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@id/ll_recordState"
-        android:orientation="horizontal">
+        tools:layout_editor_absoluteX="10dp">
 
         <Button
             android:id="@+id/btnPlay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#00BCD4"
             android:onClick="btnPlayOnclick"
             android:text="试听" />
 
@@ -260,16 +275,30 @@
             android:id="@+id/btnSave"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#00BCD4"
             android:onClick="btnSaveOnClick"
-            android:text="保存到文件" />
+            android:text="保存到文件"
+            android:translationX="40dp" />
 
         <Button
             android:id="@+id/btnJump"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="跳转到播放界面" />
+            android:background="#00BCD4"
+            android:rotationX="0"
+            android:text="跳转到播放界面"
+            android:translationX="80dp" />
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/tv_recordState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/ll_record"
+        tools:layout_editor_absoluteX="1dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

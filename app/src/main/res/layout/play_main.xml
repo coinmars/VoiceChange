@@ -59,23 +59,24 @@
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
 			android:layout_weight="1"
+			android:backgroundTint="#00B8D4"
 			android:text="PLAY" />
-		    
-		 <Button  
-		    android:id = "@+id/buttonPause"
-		    android:layout_width="fill_parent" 
-		    android:layout_height="wrap_content" 
-		    android:text="PAUSE"
-		    android:layout_weight="1"
-		    />
-		      
-		<Button  
-		    android:id = "@+id/buttonStop"
-		    android:layout_width="fill_parent" 
-		    android:layout_height="wrap_content" 
-		    android:text="STOP"
-		    android:layout_weight="1"
-    		/>
+
+		<Button
+			android:id="@+id/buttonPause"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:backgroundTint="#00B8D4"
+			android:text="PAUSE" />
+
+		<Button
+			android:id="@+id/buttonStop"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:backgroundTint="#00B8D4"
+			android:text="STOP" />
 		    
  	</LinearLayout>
 
