@@ -49,13 +49,13 @@ class MainRecordActivity : Activity(), RadioGroup.OnCheckedChangeListener, View.
         val btnRecord = findViewById<View>(R.id.switch1) as Switch
         btnRecord.setOnClickListener {
             val str = btnRecord.text.toString()
-            if (str == "按下录音") {
+            if (str == "录音") {
                 startRecord()
-                btnRecord.text = "暂停"
+                btnRecord.text = "结束"
                 initView()
             } else {
                 stopRecord()
-                btnRecord.text = "按下录音"
+                btnRecord.text = "录音"
             }
         }
         initView()
