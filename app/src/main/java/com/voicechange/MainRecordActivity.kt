@@ -46,7 +46,7 @@ class MainRecordActivity : Activity(), RadioGroup.OnCheckedChangeListener, View.
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.record_layout)
-        val btnRecord = findViewById<View>(R.id.btnRecord) as Button
+        val btnRecord = findViewById<View>(R.id.switch1) as Switch
         btnRecord.setOnClickListener {
             val str = btnRecord.text.toString()
             if (str == "按下录音") {
@@ -77,7 +77,7 @@ class MainRecordActivity : Activity(), RadioGroup.OnCheckedChangeListener, View.
         mEt_pitch_semi_tones = findViewById(R.id.et_pitch)
         mEt_rate_change = findViewById(R.id.et_ratch)
         mEt_tempo_change = findViewById(R.id.et_tempo_change)
-        mBtnRecord = findViewById(R.id.btnRecord)
+        mBtnRecord = findViewById(R.id.switch1)
         mBtnRecord?.setOnTouchListener(this)
         mBtnPlay = findViewById(R.id.btnPlay)
         mBtnPlay?.setOnClickListener(this)

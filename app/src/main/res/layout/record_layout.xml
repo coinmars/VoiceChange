@@ -132,12 +132,13 @@
         app:layout_constraintTop_toBottomOf="@id/ll_tempo_change"
         tools:layout_editor_absoluteX="10dp">
 
-        <com.geniusgithub.voicechange.ui.MultiRadioGroup
+        <com.voicechange.ui.MultiRadioGroup
             android:id="@+id/radioGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintTop_toBottomOf="@id/ll_tempo_change">
+            app:layout_constraintTop_toBottomOf="@id/ll_tempo_change"
+            tools:ignore="MissingClass">
 
 
             <LinearLayout
@@ -211,7 +212,7 @@
                     android:text="未知" />
             </LinearLayout>
 
-        </com.geniusgithub.voicechange.ui.MultiRadioGroup>
+        </com.voicechange.ui.MultiRadioGroup>
     </LinearLayout>
 
     <LinearLayout
@@ -223,14 +224,23 @@
         app:layout_constraintTop_toBottomOf="@id/ll_radioGroup"
         tools:layout_editor_absoluteX="10dp">
 
-        <Button
+        <!--<Button
             android:id="@+id/btnRecord"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#00B8D4"
             android:text="按下录音"
             android:textAlignment="center"
-            android:textAllCaps="false" />
+            android:textAllCaps="false" />!-->
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="录音"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="594dp" />
+
+
 
         <CheckBox
             android:id="@+id/checkBoxPlaying"
@@ -299,6 +309,8 @@
         android:textSize="20sp"
         app:layout_constraintTop_toBottomOf="@+id/ll_record"
         tools:layout_editor_absoluteX="1dp" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
