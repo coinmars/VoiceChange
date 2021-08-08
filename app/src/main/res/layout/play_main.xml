@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
@@ -48,37 +49,52 @@
 		android:layout_height="wrap_content"/>
 
 
- 	<LinearLayout
- 	    android:layout_width="fill_parent"
- 	    android:layout_height="wrap_content"
+	<LinearLayout
+		android:layout_width="383dp"
+		android:layout_height="144dp"
 		android:gravity="center_vertical"
- 	    android:orientation="horizontal" >
+		android:orientation="horizontal">
 
 		<Button
 			android:id="@+id/buttonPlay"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
+			android:layout_marginStart="30dp"
+			android:layout_marginTop="30dp"
 			android:layout_weight="1"
-			android:backgroundTint="#00B8D4"
-			android:text="PLAY" />
+			android:background="@drawable/btn_selector"
+			android:text="PLAY"
+			android:textColor="#fff"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
 
 		<Button
 			android:id="@+id/buttonPause"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
+			android:layout_marginStart="30dp"
+			android:layout_marginTop="30dp"
 			android:layout_weight="1"
-			android:backgroundTint="#00B8D4"
-			android:text="PAUSE" />
+			android:background="@drawable/btn_selector"
+			android:text="PAUSE"
+			android:textColor="#fff"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
 
 		<Button
 			android:id="@+id/buttonStop"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
+			android:layout_marginStart="30dp"
+			android:layout_marginTop="30dp"
 			android:layout_weight="1"
-			android:backgroundTint="#00B8D4"
-			android:text="STOP" />
-		    
- 	</LinearLayout>
+			android:background="@drawable/btn_selector"
+			android:text="STOP"
+			android:textColor="#fff"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+	</LinearLayout>
 
 
 	<LinearLayout
