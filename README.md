@@ -1,2 +1,2 @@
 # VoiceChange
-基于SoundTouch实现实时变声功能的android app
+Android端实时变声功能的android app
