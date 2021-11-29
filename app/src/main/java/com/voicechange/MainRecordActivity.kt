@@ -255,8 +255,7 @@ class MainRecordActivity : Activity(), RadioGroup.OnCheckedChangeListener, View.
         }
 
     private fun handleRecordState(ar: AsyncResult) {
-        val recordState = ar.result as Int
-        when (recordState) {
+        when (ar.result as Int) {
             RecordState.MSG_RECORDING_START -> mTvRecord!!.text = "录音中...请插入耳机"
             RecordState.MSG_RECORDING_STOP -> mTvRecord!!.text = ""
             RecordState.MSG_RECORDING_STATE_ERROR -> mTvRecord!!.text = "录音异常"
