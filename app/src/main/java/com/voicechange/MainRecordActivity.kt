@@ -15,7 +15,7 @@ import android.view.View.OnTouchListener
 import android.widget.*
 
 import com.example.soundtouch.common.AsyncResult
-import com.example.soundtouch.common.Utils
+import com.voicechange.module.Utils
 import com.tbruyelle.rxpermissions2.RxPermissions
 import com.voicechange.audio.AudioEngine
 import com.voicechange.audio.NetworkClient

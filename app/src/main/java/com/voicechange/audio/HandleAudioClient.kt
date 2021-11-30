@@ -1,6 +1,9 @@
-package com.voicechange.audio.common
+package com.voicechange.audio
 
 import com.voicechange.audio.SoundTouchTransFormTool
+import com.voicechange.audio.common.IHandleAudioCallback
+import com.voicechange.audio.common.TransFormParam
+import com.voicechange.audio.common.TransFormTool
 import java.util.*
 import java.util.concurrent.BlockingQueue
 import java.util.concurrent.TimeUnit
@@ -76,17 +79,17 @@ class HandleAudioClient {
                         do {
                             buffer = mTransFormTool.receiveSamples()
                             val bytes: ByteArray? = buffer?.let {
-                                com.example.soundtouch.common.Utils.shortToByteSmall(
+                                com.voicechange.module.Utils.shortToByteSmall(
                                     it
                                 )
                             }
                             if (bytes != null) {
-                                if (bytes.size > 0) {
+                                if (bytes.isNotEmpty()) {
                                     mAudioDatas.add(bytes)
                                     notifyHandleProcess(bytes)
                                 }
                             }
-                        } while (buffer!!.size > 0)
+                        } while (buffer!!.isNotEmpty())
                     }
                     if (mExitFlag && mRecordQueue.size == 0) {
                         break

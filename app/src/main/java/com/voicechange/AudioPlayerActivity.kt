@@ -10,7 +10,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
-import com.example.soundtouch.common.Utils
+import com.voicechange.module.Utils
 import com.voicechange.audio.SampleAudioPlayer
 import com.voicechange.audio.common.AudioConstans
 import com.voicechange.audio.common.AudioParam
