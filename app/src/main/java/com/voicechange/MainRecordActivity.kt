@@ -27,11 +27,11 @@ import com.voicechange.audio.common.TransFormParam
 class MainRecordActivity : Activity(), RadioGroup.OnCheckedChangeListener, View.OnClickListener, OnTouchListener, IHandleAudioCallback {
     private var mRadioGroup: RadioGroup? = null
 
-    private var mEt_sample_rate: EditText? = null
-    private var mEt_channels: EditText? = null
-    private var mEt_pitch_semi_tones: EditText? = null
-    private var mEt_rate_change: EditText? = null
-    private var mEt_tempo_change: EditText? = null
+    private var mEtSampleRate: EditText? = null
+    private var mEtChannels: EditText? = null
+    private var mEtPitchSemiTones: EditText? = null
+    private var mEtRateChange: EditText? = null
+    private var mEtTempoChange: EditText? = null
 
     private var mBtnRecord: Button? = null
     private var mBtnPlay: Button? = null
@@ -70,13 +70,13 @@ class MainRecordActivity : Activity(), RadioGroup.OnCheckedChangeListener, View.
         rbCustom.isChecked = true
         mCheckBoxPlaying = findViewById(R.id.checkBoxPlaying)
         mCheckBoxPlaying?.isChecked = true
-        mEt_sample_rate = findViewById(R.id.et_sample_rate)
-        mEt_sample_rate?.setEnabled(false)
-        mEt_channels = findViewById(R.id.et_channel)
-        mEt_channels?.isEnabled = false
-        mEt_pitch_semi_tones = findViewById(R.id.et_pitch)
-        mEt_rate_change = findViewById(R.id.et_ratch)
-        mEt_tempo_change = findViewById(R.id.et_tempo_change)
+        mEtSampleRate = findViewById(R.id.et_sample_rate)
+        mEtSampleRate?.isEnabled = false
+        mEtChannels = findViewById(R.id.et_channel)
+        mEtChannels?.isEnabled = false
+        mEtPitchSemiTones = findViewById(R.id.et_pitch)
+        mEtRateChange = findViewById(R.id.et_ratch)
+        mEtTempoChange = findViewById(R.id.et_tempo_change)
         mBtnRecord = findViewById(R.id.switch1)
         mBtnRecord?.setOnTouchListener(this)
         mBtnPlay = findViewById(R.id.btnPlay)
@@ -172,16 +172,16 @@ class MainRecordActivity : Activity(), RadioGroup.OnCheckedChangeListener, View.
     }
 
     private fun enableEditText(enable: Boolean) {
-        mEt_pitch_semi_tones!!.isEnabled = enable
-        mEt_rate_change!!.isEnabled = enable
-        mEt_tempo_change!!.isEnabled = enable
+        mEtPitchSemiTones!!.isEnabled = enable
+        mEtRateChange!!.isEnabled = enable
+        mEtTempoChange!!.isEnabled = enable
     }
 
     @SuppressLint("SetTextI18n")
     private fun updateAudioParamUI(pitch: Float, rate: Float, tempo: Float) {
-        mEt_pitch_semi_tones!!.setText(pitch.toString() + "")
-        mEt_rate_change!!.setText(rate.toString() + "")
-        mEt_tempo_change!!.setText(tempo.toString() + "")
+        mEtPitchSemiTones!!.setText(pitch.toString() + "")
+        mEtRateChange!!.setText(rate.toString() + "")
+        mEtTempoChange!!.setText(tempo.toString() + "")
     }
 
     override fun onClick(v: View) {
@@ -245,11 +245,11 @@ class MainRecordActivity : Activity(), RadioGroup.OnCheckedChangeListener, View.
     private val transFormParam: TransFormParam
         get() {
             val transFormParam = TransFormParam()
-            val newPitch = mEt_pitch_semi_tones!!.text.toString()
+            val newPitch = mEtPitchSemiTones!!.text.toString()
             transFormParam.mSampleRate = if (TextUtils.isEmpty(newPitch)) 0 else newPitch.toFloat().toInt()
-            val newRate = mEt_rate_change!!.text.toString()
+            val newRate = mEtRateChange!!.text.toString()
             transFormParam.mNewRate = if (TextUtils.isEmpty(newRate)) 0F else newRate.toFloat()
-            val newTempo = mEt_tempo_change!!.text.toString()
+            val newTempo = mEtTempoChange!!.text.toString()
             transFormParam.mNewTempo = if (TextUtils.isEmpty(newTempo)) 0F else newTempo.toFloat()
             return transFormParam
         }
