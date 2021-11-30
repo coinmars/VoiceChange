@@ -1,5 +1,6 @@
-package com.voicechange.ui
+package com.voicechange.view
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.util.AttributeSet
 import android.view.View
@@ -19,18 +20,21 @@ class MultiRadioGroup : RadioGroup {
         mOnCheckedChangeListener = listener
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     override fun addView(child: View, index: Int, params: ViewGroup.LayoutParams) {
         if (child is LinearLayout) {
             val childCount = child.childCount
             for (i in 0 until childCount) {
                 val view = child.getChildAt(i)
                 if (view is RadioButton) {
-                    val button = view
-                    button.setOnTouchListener { v, event ->
-                        button.isChecked = true
-                        checkRadioButton(button)
+                    view.setOnTouchListener { _, _ ->
+                        view.isChecked = true
+                        checkRadioButton(view)
                         if (mOnCheckedChangeListener != null) {
-                            mOnCheckedChangeListener!!.onCheckedChanged(this@MultiRadioGroup, button.id)
+                            mOnCheckedChangeListener!!.onCheckedChanged(
+                                this@MultiRadioGroup,
+                                view.id
+                            )
                         }
                         true
                     }
