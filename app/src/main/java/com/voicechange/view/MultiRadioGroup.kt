@@ -60,11 +60,10 @@ class MultiRadioGroup : RadioGroup {
                 for (j in 0 until childCount) {
                     val view = child.getChildAt(j)
                     if (view is RadioButton) {
-                        val button = view
-                        if (button === radioButton) {
+                        if (view === radioButton) {
                             // do nothing
                         } else {
-                            button.isChecked = false
+                            view.isChecked = false
                         }
                     }
                 }
