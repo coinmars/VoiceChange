@@ -90,11 +90,11 @@ class MainRecordActivity : Activity(), RadioGroup.OnCheckedChangeListener, View.
 
     private fun initLogic() {
         initAudioEngine()
-        requestPermisson()
+        requestPermission()
     }
 
     @SuppressLint("CheckResult")
-    private fun requestPermisson() {
+    private fun requestPermission() {
         val rxPermission = RxPermissions(this)
         rxPermission.request(
                 Manifest.permission.WRITE_EXTERNAL_STORAGE,
