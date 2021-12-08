@@ -214,23 +214,19 @@ class MainRecordActivity : Activity(), RadioGroup.OnCheckedChangeListener, View.
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onTouch(v: View, event: MotionEvent): Boolean {
-        /*
-        switch(v.getId()) {
-            case R.id.btnRecord:
-                int action = event.getAction();
-                switch (action) {
-                    case MotionEvent.ACTION_DOWN:
-                        startRecord();
-                        break;
-                    case MotionEvent.ACTION_CANCEL:
-                    case MotionEvent.ACTION_OUTSIDE:
-                    case MotionEvent.ACTION_UP:
-                        stopRecord();
-                        break;
-                    default:
+        when(v.getId()) {
+            R.id.switch1 -> {
+                val action = event.getAction()
+                when(action) {
+                    MotionEvent.ACTION_DOWN -> {
+                        startRecord()
+                    }
+                    MotionEvent.ACTION_CANCEL -> null
+                    MotionEvent.ACTION_OUTSIDE -> null
+                    MotionEvent.ACTION_UP -> stopRecord()
                 }
-                break;
-        }*/
+            }
+        }
         return false
     }
 
