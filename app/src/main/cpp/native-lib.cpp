@@ -3,7 +3,7 @@
 
 extern "C"
 JNIEXPORT jstring JNICALL
-Java_com_geniusgithub_voicechange_jni_NDKUtil_stringFromJNI(
+Java_com_voicechange_jni_NDKUtil_stringFromJNI(
         JNIEnv* env,
         jobject /* this */) {
     std::string hello = "Hello from C++";
