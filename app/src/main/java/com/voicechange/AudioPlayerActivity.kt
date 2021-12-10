@@ -37,8 +37,7 @@ class AudioPlayerActivity : Activity(), View.OnClickListener {
     private var mFrequency = AudioConstans.FREQUENCY
     private var mChannel = 1
     private val mSampBit = AudioConstans.ENCODING
-    private val mHandler: Handler = @SuppressLint("HandlerLeak")
-    object : Handler() {
+    private val mHandler: Handler = @SuppressLint("HandlerLeak") object : Handler() {
         @SuppressLint("HandlerLeak")
         override fun handleMessage(msg: Message) {
             // TODO Auto-generated method stub
